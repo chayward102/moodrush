@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "832960436785",
+    "project_id": "firebase-moodrush"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:832960436785:android:9374cb37963c7ea0",
+        "android_client_info": {
+          "package_name": "com.mrush.chayward102.moodrush"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACtIe02kaE4diLFtQtHabY8hQ0H1SoET0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-76333657-3"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

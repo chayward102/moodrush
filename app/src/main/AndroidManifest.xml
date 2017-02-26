@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mrush.chayward102.moodrush">
+    /*google Analytics*/
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".AnalyticsApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".QuestionTwo" />
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".QuestionOne" />
+        <activity android:name=".QuestionThree" />
+        <activity android:name=".QuestionFour" />
+        <activity android:name=".QuestionFive" />
+        <activity android:name=".QuestionSix" />
+        <activity android:name=".QuestionSeven" />
+        <activity android:name=".QuestionEight" />
+        <activity android:name=".QuestionNine" />
+        <activity android:name=".QuestionTen" />
+        <activity android:name=".QuestionEleven" />
+        <activity android:name=".QuestionTwelve" />
+        <activity android:name=".QuestionFourteen" />
+        <activity android:name=".QuestionFifteen" />
+        <activity android:name=".QuestionSixteen" />
+        <activity android:name=".QuestionSeventeen" />
+        <activity android:name=".QuestionEighteen" />
+        <activity android:name=".QuestionNineteen" />
+        <activity android:name=".QuestionTwenty" />
+        <activity android:name=".QuestionTwentyone"></activity>
+    </application>
+
+</manifest>
