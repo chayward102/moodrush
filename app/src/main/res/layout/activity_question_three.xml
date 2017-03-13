@@ -1,22 +1,25 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity"
+    app:layout_collapseParallaxMultiplier="0.0">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_width="177dp"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:layout_weight="1">
 
         <Button
             android:id="@+id/a"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/question1_a"
+            android:background="@drawable/question3_a"
             android:onClick="onClick"/>
 
         <Button
@@ -24,29 +27,25 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/question1_b"
+            android:background="@drawable/question3_b"
             android:onClick="onClick"/>
 
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="horizontal">
         <Button
             android:id="@+id/c"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/question1_c"
+            android:background="@drawable/question3_c"
             android:onClick="onClick"/>
         <Button
             android:id="@+id/d"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/question1_d"
+            android:background="@drawable/question3_d"
             android:onClick="onClick"/>
     </LinearLayout>
+
+
 </LinearLayout>

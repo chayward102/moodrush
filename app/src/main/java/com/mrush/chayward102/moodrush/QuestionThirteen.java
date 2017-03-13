@@ -21,7 +21,7 @@ import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 
 
-public class QuestionFifteen extends AppCompatActivity {
+public class QuestionThirteen extends AppCompatActivity {
 
     private Tracker mTracker;
 
@@ -32,7 +32,7 @@ public class QuestionFifteen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_question_fifteen);
+        setContentView(R.layout.activity_question_thirteen);
 
         // [START shared_tracker]
         // Obtain the shared Tracker instance.
@@ -44,7 +44,7 @@ public class QuestionFifteen extends AppCompatActivity {
     }
 
     private void sendScreenName() {
-        String name = getResources().getString(R.string.q15);
+        String name = getResources().getString(R.string.q13);
 
         // [START screen_view_hit]
         mTracker.setScreenName(name);
@@ -61,48 +61,48 @@ public class QuestionFifteen extends AppCompatActivity {
             case R.id.a: {
                 // handle button A click;
                 mTracker.send(new HitBuilders.EventBuilder()
-                        .setCategory(getResources().getString(R.string.q15))
+                        .setCategory(getResources().getString(R.string.q13))
                         .setAction("a")
                         .setLabel("A")
                         .setValue(1)
                         .build());
-                Intent intent = new Intent(this, QuestionSixteen.class);
+                Intent intent = new Intent(this, QuestionFourteen.class);
                 startActivity(intent);
                 break;
             }
             case R.id.b: {
                 // handle button b click;
                 mTracker.send(new HitBuilders.EventBuilder()
-                        .setCategory(getResources().getString(R.string.q15))
+                        .setCategory(getResources().getString(R.string.q13))
                         .setAction("b")
                         .setLabel("B")
                         .setValue(2)
                         .build());
-                Intent intent = new Intent(this, QuestionSixteen.class);
+                Intent intent = new Intent(this, QuestionFourteen.class);
                 startActivity(intent);
                 break;
             }
             case R.id.c: {
                 //handle button c click;
                 mTracker.send(new HitBuilders.EventBuilder()
-                        .setCategory(getResources().getString(R.string.q15))
+                        .setCategory(getResources().getString(R.string.q13))
                         .setAction("c")
                         .setLabel("A")
                         .setValue(1)
                         .build());
-                Intent intent = new Intent(this, QuestionSixteen.class);
+                Intent intent = new Intent(this, QuestionFourteen.class);
                 startActivity(intent);
                 break;
             }
             case R.id.d: {
                 //handle button d click
                 mTracker.send(new HitBuilders.EventBuilder()
-                        .setCategory(getResources().getString(R.string.q15))
+                        .setCategory(getResources().getString(R.string.q13))
                         .setAction("d")
                         .setLabel("A")
                         .setValue(1)
                         .build());
-                Intent intent = new Intent(this, QuestionSixteen.class);
+                Intent intent = new Intent(this, QuestionFourteen.class);
                 startActivity(intent);
                 break;
             }

@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
@@ -15,6 +16,7 @@ import com.google.android.gms.analytics.Tracker;
 
 public class QuestionOne extends AppCompatActivity {
 
+    DatabaseHelper myDB;
     private Tracker mTracker;
 
     /**
@@ -31,6 +33,9 @@ public class QuestionOne extends AppCompatActivity {
         AnalyticsApplication application = (AnalyticsApplication) getApplication();
         mTracker = application.getDefaultTracker();
         // [END shared_tracker]
+
+        //creat DB
+        myDB = new DatabaseHelper(this);
 
         sendScreenName();
 
@@ -58,7 +63,9 @@ public class QuestionOne extends AppCompatActivity {
                         .setLabel("A")
                         .setValue(1)
                         .build());
-                Intent intent = new Intent(this, QuestionTwo.class);
+                //insert answer into DB
+                myDB.addData(0);
+                Intent intent = new Intent(this, quizResults.class);
                 startActivity(intent);
                 break;
             }
@@ -70,6 +77,8 @@ public class QuestionOne extends AppCompatActivity {
                         .setLabel("B")
                         .setValue(2)
                         .build());
+                //insert answer into DB
+                AddData(1);
                 Intent intent = new Intent(this, QuestionTwo.class);
                 startActivity(intent);
                 break;
@@ -82,6 +91,8 @@ public class QuestionOne extends AppCompatActivity {
                         .setLabel("C")
                         .setValue(3)
                         .build());
+                //insert answer into DB
+                AddData(1);
                 Intent intent = new Intent(this, QuestionTwo.class);
                 startActivity(intent);
                 break;
@@ -94,6 +105,8 @@ public class QuestionOne extends AppCompatActivity {
                         .setLabel("C")
                         .setValue(4)
                         .build());
+                //insert answer into DB
+                AddData(1);
                 Intent intent = new Intent(this, QuestionTwo.class);
                 startActivity(intent);
                 break;
@@ -102,6 +115,11 @@ public class QuestionOne extends AppCompatActivity {
             default:
                 throw new RuntimeException("Unknown button ID");
         }
+
+    }
+
+    public void AddData(int newEntry) {
+
 
     }
 

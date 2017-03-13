@@ -66,7 +66,7 @@ public class QuestionFour extends AppCompatActivity {
                         .setLabel("A")
                         .setValue(1)
                         .build());
-                Intent intent = new Intent(this, QuestionThree.class);
+                Intent intent = new Intent(this, QuestionFive.class);
                 startActivity(intent);
                 break;
             }
@@ -78,7 +78,7 @@ public class QuestionFour extends AppCompatActivity {
                         .setLabel("B")
                         .setValue(2)
                         .build());
-                Intent intent = new Intent(this, QuestionThree.class);
+                Intent intent = new Intent(this, QuestionFive.class);
                 startActivity(intent);
                 break;
             }
@@ -90,7 +90,7 @@ public class QuestionFour extends AppCompatActivity {
                         .setLabel("A")
                         .setValue(1)
                         .build());
-                Intent intent = new Intent(this, QuestionThree.class);
+                Intent intent = new Intent(this, QuestionFive.class);
                 startActivity(intent);
                 break;
             }
@@ -102,7 +102,7 @@ public class QuestionFour extends AppCompatActivity {
                         .setLabel("A")
                         .setValue(1)
                         .build());
-                Intent intent = new Intent(this, QuestionThree.class);
+                Intent intent = new Intent(this, QuestionFive.class);
                 startActivity(intent);
                 break;
             }

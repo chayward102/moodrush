@@ -33,6 +33,7 @@
         <activity android:name=".QuestionTen" />
         <activity android:name=".QuestionEleven" />
         <activity android:name=".QuestionTwelve" />
+        <activity android:name=".QuestionThirteen" />
         <activity android:name=".QuestionFourteen" />
         <activity android:name=".QuestionFifteen" />
         <activity android:name=".QuestionSixteen" />
@@ -40,7 +41,8 @@
         <activity android:name=".QuestionEighteen" />
         <activity android:name=".QuestionNineteen" />
         <activity android:name=".QuestionTwenty" />
-        <activity android:name=".QuestionTwentyone"></activity>
+        <activity android:name=".QuestionTwentyone" />
+        <activity android:name=".quizResults"></activity>
     </application>
 
 </manifest>
