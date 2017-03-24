@@ -25,10 +25,10 @@ public class quizResults extends AppCompatActivity {
 
 
         myDB = new DatabaseHelper(this);
-
+/*
         //populate an ArrayList<String> from the database and then view it
         ArrayList<String> theList = new ArrayList<>();
-        Cursor data = myDB.getSum();
+        //Cursor data = myDB.getSum();
         if(data.getCount() == 0){
             Toast.makeText(this, "There are no contents in this list!",Toast.LENGTH_LONG).show();
         }else{
@@ -36,6 +36,7 @@ public class quizResults extends AppCompatActivity {
                 ((TextView)findViewById(R.id.textView1)).setText("total score is: " + data.getString(1));
             }
         }
+        */
 
 
     }

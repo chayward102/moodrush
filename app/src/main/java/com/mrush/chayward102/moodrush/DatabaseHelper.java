@@ -13,7 +13,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "quizList.db";
-    public static final String TABLE_NAME = "quizList_data";
+    public static final String TABLE_NAME = "quizList_data2";
     public static final String COL1 = "ID";
     public static final String COL2 = "ITEM1";
 
@@ -24,18 +24,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createTable = "CREATE TABLE " + TABLE_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                " ITEM1 INTEGER)";
+        String createTable = "CREATE TABLE " + TABLE_NAME + " (QuestionNumber  INTEGER , QuestionAnswer INTEGER)";
         db.execSQL(createTable);
     }
 
-
+/*
     public int getSum(){
         SQLiteDatabase db = this.getWritableDatabase();
         int sumData = db.rawQuery("SELECT SUM(ITEM1) FROM " + TABLE_NAME, null);
         return data;
     }
-
+*/
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP IF TABLE EXISTS " + TABLE_NAME);
