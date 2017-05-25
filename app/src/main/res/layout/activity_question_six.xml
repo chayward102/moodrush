@@ -8,11 +8,13 @@
     app:layout_collapseParallaxMultiplier="0.0">
 
     <LinearLayout
+        android:id="@+id/mainLayout"
         android:layout_gravity="center"
         android:layout_width="177dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:tag="6">
 
         <Button
             android:id="@+id/a"
@@ -20,31 +22,32 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/question6_a"
-            android:onClick="onClick"/>
-
+            android:onClick="onClick"
+            android:tag="1"/>
         <Button
             android:id="@+id/b"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/question6_b"
-            android:onClick="onClick"/>
-
-
+            android:onClick="onClick"
+            android:tag="2"/>
         <Button
             android:id="@+id/c"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/question6_c"
-            android:onClick="onClick"/>
+            android:onClick="onClick"
+            android:tag="3"/>
         <Button
             android:id="@+id/d"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/question6_d"
-            android:onClick="onClick"/>
+            android:onClick="onClick"
+            android:tag="4"/>
     </LinearLayout>
 
 

@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
@@ -15,6 +17,7 @@ import com.google.android.gms.analytics.Tracker;
 
 public class QuestionThree extends AppCompatActivity {
 
+    DatabaseHelper myDB;
     private Tracker mTracker;
 
     /**
@@ -31,6 +34,10 @@ public class QuestionThree extends AppCompatActivity {
         AnalyticsApplication application = (AnalyticsApplication) getApplication();
         mTracker = application.getDefaultTracker();
         // [END shared_tracker]
+
+        //New data connect database
+        myDB = new DatabaseHelper(this);
+
 
         sendScreenName();
     }
@@ -49,60 +56,31 @@ public class QuestionThree extends AppCompatActivity {
      */
 
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.a: {
-                // handle button A click;
-                mTracker.send(new HitBuilders.EventBuilder()
-                        .setCategory(getResources().getString(R.string.q3))
-                        .setAction("a")
-                        .setLabel("A")
-                        .setValue(1)
-                        .build());
-                Intent intent = new Intent(this, QuestionFour.class);
-                startActivity(intent);
-                break;
-            }
-            case R.id.b: {
-                // handle button b click;
-                mTracker.send(new HitBuilders.EventBuilder()
-                        .setCategory(getResources().getString(R.string.q3))
-                        .setAction("b")
-                        .setLabel("B")
-                        .setValue(2)
-                        .build());
-                Intent intent = new Intent(this, QuestionFour.class);
-                startActivity(intent);
-                break;
-            }
-            case R.id.c: {
-                //handle button c click;
-                mTracker.send(new HitBuilders.EventBuilder()
-                        .setCategory(getResources().getString(R.string.q3))
-                        .setAction("c")
-                        .setLabel("A")
-                        .setValue(1)
-                        .build());
-                Intent intent = new Intent(this, QuestionFour.class);
-                startActivity(intent);
-                break;
-            }
-            case R.id.d: {
-                //handle button d click
-                mTracker.send(new HitBuilders.EventBuilder()
-                        .setCategory(getResources().getString(R.string.q3))
-                        .setAction("d")
-                        .setLabel("A")
-                        .setValue(1)
-                        .build());
-                Intent intent = new Intent(this, QuestionFour.class);
-                startActivity(intent);
-                break;
-            }
 
-            default:
-                throw new RuntimeException("Unknown button ID");
-        }
+        //Gets the button that has been clicked
+        Button btnClicked = (Button)findViewById(v.getId());
 
+        //Gets the tag assigned to the clicked button and converts it to and Integer
+        int id = Integer.parseInt(btnClicked.getTag().toString());
+
+
+        mTracker.send(new HitBuilders.EventBuilder()
+                .setCategory(getResources().getString(R.string.q3))
+                .setAction(new String[]{"a","b","c","d"}[id])
+                .setValue(id)
+                .build());
+
+        //Adds the data to the database dependent on the button that is clicked using the tag
+        AddData(id);
+
+        //changes screen
+        Intent intent = new Intent(this, QuestionFour.class);
+        startActivity(intent);
+    }
+
+    public void AddData(int newEntry) {
+        int questionID = Integer.parseInt(((LinearLayout) findViewById(R.id.mainLayout)).getTag().toString());
+        myDB.answerQuestion(questionID,newEntry);
     }
 
 }

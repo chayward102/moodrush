@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mrush.chayward102.moodrush.HowWorks">
+
+    <EditText
+        android:id="@+id/howStudyText"
+        android:layout_width="496dp"
+        android:layout_height="714dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="How the study works\n\nOver the next few weeks, we are looking to collect data from a number of volunteers and this will allow us to improve the app’s functionality and design. If you decide to take part in this study, you will need to click the “I agree” button. Please note that none of your answers will be linked to your name. Instead you will be given a random number for this study. There are three parts to this project.  Written mood questions: Please answer these by clicking on the responses as explained in the instructions on screen. Your answers will be recorded by the phone. Mood images that are part of the app: In the app you will see a series of screens with pictures. Your job is only to think about how you have been feeling in the past two weeks and to tap the screen that best fits with that. After each tap you will automatically be taken to the next screen. The app will record how long you looked at each screen and what selections you made. Questions about how you feel about the app (see B) and the written mood questions (see A): These all ask about what you thought about the choice of pictures and your general thoughts about the app (see B) compared to the written mood questions (see A).   Once you have clicked the “I agree” button, the app will either  first take you to the written mood questions (see A) followed by the main menu of the app (see B) and then the general questions about the app (see C) or  first to the main menu of the app (see B) and then to the written mood questions (see A), followed by general questions about the app (see C). "
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.32999998" />
+</android.support.constraint.ConstraintLayout>

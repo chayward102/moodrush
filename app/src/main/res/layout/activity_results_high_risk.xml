@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="279dp"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/low_risk"
+            android:layout_width="match_parent"
+            android:layout_height="275dp"
+            android:background="@drawable/high_risk1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/callFriend"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:tag="1"
+            android:text="@string/prompt_call_friend"
+            android:textSize="18dp" />
+        <Button
+            android:id="@+id/call111"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/prompt_call_111"
+            android:layout_weight="1"
+            android:textSize="18dp"
+            android:background="@color/colorPrimary"
+            android:onClick="onClick"
+            android:tag="2"/>/>
+
+        <Button
+            android:id="@+id/callYouth"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/prompt_call_youthline"
+            android:layout_weight="1"
+            android:textSize="18dp"
+            android:background="@color/colorPrimary"
+            android:onClick="onClick"
+            android:tag="3"/>/>
+        <Button
+            android:id="@+id/callLife"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/prompt_call_lifeline"
+            android:layout_weight="1"
+            android:textSize="18dp"
+            android:background="@color/colorPrimary"
+            android:onClick="onClick"
+            android:tag="4"/>
+
+        <Button
+            android:id="@+id/mainMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/prompt_main_menu"
+            android:layout_weight="1"
+            android:textSize="18dp"
+            android:background="@color/colorPrimary"
+            android:onClick="onClick"
+            android:tag="5"/>
+
+    </LinearLayout>
+</LinearLayout>

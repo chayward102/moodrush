@@ -14,10 +14,11 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."</string>
     <!-- Strings related to tutorial -->
-    <string name="tutorial_question">Which describes your mood?</string>
+    <string name="tutorial_question">Which describes more time has passed?</string>
     <string name="tutorial_instruction">Tap on your choice</string>
     <string name="acknowledgement_message">That\'s it\, just pick a side</string>
     <string name="start_quiz">let\'s Go</string>
+
     <string name="q1">Question One</string>
     <string name="q2">Question Two</string>
     <string name="q3">Question Three</string>
@@ -39,6 +40,17 @@
     <string name="q19">Question Nineteen</string>
     <string name="q20">Question Twenty</string>
     <string name="q21">Question Twentyone</string>
+
+    <string name="prompt_call_friend">Call a Friend</string>
+    <string name="prompt_call_111">Call 111</string>
+    <string name="prompt_call_youthline">Call Youthline</string>
+    <string name="prompt_call_lifeline">Call Lifeline</string>
+    <string name="prompt_main_menu">Main menu</string>
+
+    <string name="phone_number_111">111</string>
+    <string name="phone_number_youthline">0800376633</string>
+    <string name="phone_number_lifeline">0800543354</string>
+    <string name="home_page_message">Hi there  Thank you very much for your interest in this project. Just click on any of the headings below to read more about this project and us.  The MoodRush Team </string>
 
 
 </resources>

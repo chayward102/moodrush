@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mrush.chayward102.moodrush.Consent">
+
+    <EditText
+        android:id="@+id/consentText"
+        android:layout_width="526dp"
+        android:layout_height="390dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="Consent\n\nBy clicking on the “I agree” button, you indicate that it is okay for us to save your responses and how long you spent on each screen of the app. The recorded data will not have your name attached. Instead, you will be given a random number for this study. This means that no one will be able to identify you. Your data will be saved on password protected computers and may be used for publishing academic articles. You may, at any point, decide to quit and not continue with the study. For more information about the project and how it works, please follow the links below. If you have any questions about this, please ask the team today or contact us later (contact details under “Who is running the study”).  "
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.19999999" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="181dp"
+        android:layout_height="94dp"
+        android:text="I Agree"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:textSize="25sp"
+        android:onClick="agreeBtnClicked"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.82" />
+</android.support.constraint.ConstraintLayout>

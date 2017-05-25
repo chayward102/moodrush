@@ -4,6 +4,9 @@
     /*google Analytics*/
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:name=".AnalyticsApplication"
@@ -12,17 +15,19 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity">
+        /*replace with index2 after testing*/
+        <activity android:name=".ResultsMediumRisk">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".QuestionTwo" />
-        <activity android:name=".Main2Activity" />
+        /*Start of app*/
         <activity android:name=".QuestionOne" />
+        <activity android:name=".QuestionTwo" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Main2Activity" />
         <activity android:name=".QuestionThree" />
         <activity android:name=".QuestionFour" />
         <activity android:name=".QuestionFive" />
@@ -42,7 +47,14 @@
         <activity android:name=".QuestionNineteen" />
         <activity android:name=".QuestionTwenty" />
         <activity android:name=".QuestionTwentyone" />
-        <activity android:name=".quizResults"></activity>
+        <activity android:name=".quizResults" />
+
+
+        <activity android:name=".ResultsHighRisk" />
+        <activity android:name=".Consent" />
+        <activity android:name=".About" />
+        <activity android:name=".HowWorks" />
+        <activity android:name=".RunningWho"></activity>
     </application>
 
 </manifest>

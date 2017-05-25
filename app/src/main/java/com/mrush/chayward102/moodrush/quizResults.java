@@ -26,9 +26,33 @@ public class quizResults extends AppCompatActivity {
 
         myDB = new DatabaseHelper(this);
 
+        Cursor c = myDB.getListContents();
+
+        TextView name = (TextView)findViewById(R.id.txtRes);
+        int sum = myDB.getSum();
+
+
+       String stringSum = Integer.toString(sum);
+        Toast.makeText(this, stringSum,Toast.LENGTH_LONG).show();
+
+        name.setText( "Your score: " + Integer.toString(sum) );
+        if (sum<22){
+            setContentView(R.layout.activity_results_low_risk);
+        }
+
+        else if(sum>21 && sum<29){
+            setContentView(R.layout.activity_results_medium_risk);
+        }
+        else{
+            setContentView(R.layout.activity_results_high_risk);
+        }
+
+
+
+/*
         //populate an ArrayList<String> from the database and then view it
         ArrayList<String> theList = new ArrayList<>();
-        Cursor data = myDB.getSum();
+        //Cursor data = myDB.getSum();
         if(data.getCount() == 0){
             Toast.makeText(this, "There are no contents in this list!",Toast.LENGTH_LONG).show();
         }else{
@@ -36,6 +60,7 @@ public class quizResults extends AppCompatActivity {
                 ((TextView)findViewById(R.id.textView1)).setText("total score is: " + data.getString(1));
             }
         }
+        */
 
 
     }

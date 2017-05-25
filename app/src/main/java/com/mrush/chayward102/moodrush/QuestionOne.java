@@ -5,9 +5,13 @@
 package com.mrush.chayward102.moodrush;
 
 import android.content.Intent;
+import android.icu.text.IDNA;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.analytics.HitBuilders;
@@ -34,8 +38,12 @@ public class QuestionOne extends AppCompatActivity {
         mTracker = application.getDefaultTracker();
         // [END shared_tracker]
 
-        //creat DB
+        //DB instance for read write to DB
         myDB = new DatabaseHelper(this);
+
+
+        //for testing
+        myDB.onUpgrade(myDB.getWritableDatabase(),0,1);
 
         sendScreenName();
 
@@ -54,73 +62,33 @@ public class QuestionOne extends AppCompatActivity {
     /** Called when the user selects an image*/
 
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.a: {
-                // handle button A click;
-                mTracker.send(new HitBuilders.EventBuilder()
-                        .setCategory(getResources().getString(R.string.q1))
-                        .setAction("a")
-                        .setLabel("A")
-                        .setValue(1)
-                        .build());
-                //insert answer into DB
-                myDB.addData(0);
-                Intent intent = new Intent(this, quizResults.class);
-                startActivity(intent);
-                break;
-            }
-            case R.id.b: {
-                // handle button b click;
-                mTracker.send(new HitBuilders.EventBuilder()
-                        .setCategory(getResources().getString(R.string.q1))
-                        .setAction("b")
-                        .setLabel("B")
-                        .setValue(2)
-                        .build());
-                //insert answer into DB
-                AddData(1);
-                Intent intent = new Intent(this, QuestionTwo.class);
-                startActivity(intent);
-                break;
-            }
-            case R.id.c: {
-                //handle button c click;
-                mTracker.send(new HitBuilders.EventBuilder()
-                        .setCategory(getResources().getString(R.string.q1))
-                        .setAction("c")
-                        .setLabel("C")
-                        .setValue(3)
-                        .build());
-                //insert answer into DB
-                AddData(1);
-                Intent intent = new Intent(this, QuestionTwo.class);
-                startActivity(intent);
-                break;
-            }
-            case R.id.d: {
-                //handle button d click
-                mTracker.send(new HitBuilders.EventBuilder()
-                        .setCategory(getResources().getString(R.string.q1))
-                        .setAction("d")
-                        .setLabel("C")
-                        .setValue(4)
-                        .build());
-                //insert answer into DB
-                AddData(1);
-                Intent intent = new Intent(this, QuestionTwo.class);
-                startActivity(intent);
-                break;
-            }
 
-            default:
-                throw new RuntimeException("Unknown button ID");
-        }
+        //Gets the button that has been clicked
+        Button btnClicked = (Button)findViewById(v.getId());
 
+        //Gets the tag assigned to the clicked button and converts it to and Integer
+        int id = Integer.parseInt(btnClicked.getTag().toString());
+
+        //below line is added because when question4 is selected it exceeds the range of the new String list
+        id = id -1;
+
+        mTracker.send(new HitBuilders.EventBuilder()
+                .setCategory(getResources().getString(R.string.q1))
+                .setAction(new String[]{"a","b","c","d"}[id])
+                .setValue(id)
+                .build());
+
+        //Adds the data to the database dependent on the button that is clicked using the tag
+        AddData(id);
+
+        //changes screen
+        Intent intent = new Intent(this, QuestionTwo.class);
+        startActivity(intent);
     }
 
     public void AddData(int newEntry) {
-
-
+        int questionID = Integer.parseInt(((LinearLayout) findViewById(R.id.mainLayout)).getTag().toString());
+        myDB.answerQuestion(questionID,newEntry);
     }
 
 }

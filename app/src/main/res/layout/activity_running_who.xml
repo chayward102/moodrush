@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mrush.chayward102.moodrush.RunningWho">
+
+    <EditText
+        android:id="@+id/runningWhoText"
+        android:layout_width="550dp"
+        android:layout_height="826dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:maxLines="1000"
+        android:scrollbars="vertical"
+        android:text="Who is running the study\n\nKia ora, We are a group of people passionate about mental health and wellbeing, particularly that of our young people, you! Our team is very diverse, both in terms of origins and research and academic background. Please check below for a little summary of each of us:   Sylvia I am from the beautiful Hessen region in Germany and have been in Aotearoa for more than 10 years. My hometown is very old, surrounded by the Rhoen mountains and a river by the same name as my town. There is an old monastery on the hill up from my family home, lots of old churches and a medieval centre of town with cobblestone roads. My mum and three younger sisters are all in Germany and I try and visit once a year. My New Zealand home is near Lake Pupuke and I feel very connected to Rangitoto. When I am not outside hiking, running or working in my garden, I teach a lot of facets of health science and health research at Unitec. My background in psychology (University of Auckland) and the study of the brain (Max Planck Institute, Germany) has given me a lot of opportunity to connect with people from all over the world and has made me passionate about finding ways to improve everyone’s wellbeing. I am very lucky to be surrounded by a team with diverse skillsets for the project you are reading about and would love you to be on board, too. Email: shach@unitec.ac.nz     Nilufar   Ray I was born in Mauritius, a small island in the indian ocean and after my secondary education I went to Northern island for a nurse training. I, then moved to the South of England to start my career as a mental health nurse.  I have 25 years of clinical experience in mental health settings across both inpatient and community settings  and continued post graduate education at the same time. I then moved to  New Zealand 8 years ago and continued my career in community mental health team as well as finishing my master's degree University of Auckland. As part of my clinical role, I have successfully planned and redesigned staff orientation material for mental health services for older people and regularly presented educational packages to clinicians working in aged residential care facilities, carers and general public.  I am currently doing my DHSc at Auckland university of Technologie. I recently started working as  a  lecturer in the Health Care pathway and is the course coordinator for the mental health praxis course paper that form part of the Bachelor of Nursing programme at Unitec Institute of Technology.  I am passionate about research and seek to establish in the pathway of health research as a career. Christian   "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

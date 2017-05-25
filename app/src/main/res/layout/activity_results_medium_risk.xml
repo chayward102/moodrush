@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/question2_a"
+            android:background="@drawable/chat_icon"
             android:onClick="onClick"
             android:tag="1"/>
 
@@ -31,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/question2_b"
+            android:background="@drawable/track_history"
             android:onClick="onClick"
             android:tag="2"/>
 
@@ -41,17 +41,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/question2_c"
+            android:background="@drawable/talk_doc"
             android:onClick="onClick"
             android:tag="3"/>
-        <Button
-            android:id="@+id/d"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/question2_d"
-            android:onClick="onClick"
-            android:tag="4"/>
+
     </LinearLayout>
 
 

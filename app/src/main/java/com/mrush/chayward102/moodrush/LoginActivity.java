@@ -360,7 +360,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     public void skipSignInButtonClicked(View view){
 
 
-        Intent intent = new Intent(this, QuestionOne.class);
+        Intent intent = new Intent(this, ResultsHighRisk.class);
         startActivity(intent);
     }
 }

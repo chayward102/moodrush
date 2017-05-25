@@ -16,14 +16,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/a"/>
+            android:background="@drawable/calandar_short"/>
 
         <View
             android:id="@+id/topRightButtonQuestion_1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/b"/>
+            android:background="@drawable/calandar_long"/>
 
     </LinearLayout>
 
