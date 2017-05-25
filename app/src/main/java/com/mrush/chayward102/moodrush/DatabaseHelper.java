@@ -28,14 +28,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(createTable);
     }
 
-
+/*
     public int getSum(){
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor sumData = db.rawQuery("SELECT SUM(QuestionAnswer) AS \"SUM\"  FROM " + TABLE_NAME, null);
         sumData.moveToFirst();
         return sumData.getInt(sumData.getColumnIndex("SUM"));
     }
-
+*/
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
