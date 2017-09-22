@@ -5,7 +5,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
@@ -16,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         /*replace with index2 after testing*/
-        <activity android:name=".ResultsMediumRisk">
+        <activity android:name=".Index2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,10 +23,14 @@
             </intent-filter>
         </activity>
         /*Start of app*/
+        <activity android:name=".Consent" />
+        <activity android:name=".About" />
+        <activity android:name=".HowWorks" />
+        <activity android:name=".RunningWho"/>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".Main2Activity" />
         <activity android:name=".QuestionOne" />
         <activity android:name=".QuestionTwo" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".Main2Activity" />
         <activity android:name=".QuestionThree" />
         <activity android:name=".QuestionFour" />
         <activity android:name=".QuestionFive" />
@@ -48,13 +51,10 @@
         <activity android:name=".QuestionTwenty" />
         <activity android:name=".QuestionTwentyone" />
         <activity android:name=".quizResults" />
-
-
-        <activity android:name=".ResultsHighRisk" />
-        <activity android:name=".Consent" />
-        <activity android:name=".About" />
-        <activity android:name=".HowWorks" />
-        <activity android:name=".RunningWho"></activity>
+        <activity android:name=".ResultsLowRisk" />
+        <activity android:name=".ResultsMediumRisk" />
+        <activity android:name=".ResultsHighRisk" >
+        </activity>
     </application>
 
 </manifest>

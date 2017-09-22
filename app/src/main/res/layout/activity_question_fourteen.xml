@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/a1"
+            android:background="@drawable/question14_a"
             android:onClick="onClick"
             android:tag="1"/>
 
@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/b1"
+            android:background="@drawable/question14_b"
             android:onClick="onClick"
             android:tag="2"/>
 
@@ -40,7 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/c1"
+            android:background="@drawable/question14_c"
             android:onClick="onClick"
             android:tag="3"/>
         <Button
@@ -48,7 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/d1"
+            android:background="@drawable/question14_d"
             android:onClick="onClick"
             android:tag="4"/>
     </LinearLayout>

@@ -62,13 +62,6 @@ public class ResultsHighRisk extends AppCompatActivity {
         int id = Integer.parseInt(btnClicked.getTag().toString());
 
 
-        mTracker.send(new HitBuilders.EventBuilder()
-                .setCategory(getResources().getString(R.string.q2))
-                .setAction(new String[]{"call_friend", "call_111", "call_youthline", "call_lifeline", "main_menu"}[id])
-                .setValue(id)
-                .build());
-
-        //Adds the data to the database dependent on the button that is clicked using the tag
 
 
         //changes screen
@@ -80,6 +73,8 @@ public class ResultsHighRisk extends AppCompatActivity {
                 // BoD con't: CONTENT_TYPE instead of CONTENT_ITEM_TYPE
                 intent.setType(ContactsContract.CommonDataKinds.Phone.CONTENT_TYPE);
                 startActivityForResult(intent, 1);
+
+                Intent it= new Intent(Intent.ACTION_PICK,  ContactsContract.Contacts.CONTENT_URI);
 
                 break;
             case 2:
@@ -99,13 +94,18 @@ public class ResultsHighRisk extends AppCompatActivity {
                 String r = "tel:" + getString(R.string.phone_number_lifeline);
                 k.setData(Uri.parse(r));
                 startActivity(k);
+                break;
             case 5:
+                Intent l = new Intent(this, Index2.class);
+                startActivity(l);
+                break;
 
 
             default:
-                System.out.println("Invalid grade");
+                Intent m = new Intent(this, Index2.class);
+                startActivity(m);
         }
 
-    }
+     }
 
 }

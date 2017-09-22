@@ -45,6 +45,15 @@
             android:onClick="onClick"
             android:tag="3"/>
 
+        <Button
+            android:id="@+id/home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/home"
+            android:onClick="onClick"
+            android:tag="4" />
+
     </LinearLayout>
 
 

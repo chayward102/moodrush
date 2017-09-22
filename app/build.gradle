@@ -7,8 +7,8 @@ android {
         applicationId "com.mrush.chayward102.moodrush"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName '3.0'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -16,6 +16,8 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    productFlavors {
     }
 }
 
@@ -34,6 +36,11 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
+repositories {
+    maven {
+        url 'https://maven.google.com'
+    }
+}
 
 
 

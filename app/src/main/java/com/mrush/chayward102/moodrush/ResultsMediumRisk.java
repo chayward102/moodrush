@@ -41,9 +41,14 @@ public class ResultsMediumRisk extends AppCompatActivity {
             Intent intent = new Intent(this, Index2.class);
             startActivity(intent);
         }
-        else {
+        else if(id == 3) {
             Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.healthpoint.co.nz/gps-accident-urgent-medical-care/"));
             startActivity(browserIntent);
+        }
+        else if(id == 4){
+            Intent intent = new Intent(this, Index2.class);
+            startActivity(intent);
+
         }
 
 

@@ -58,12 +58,16 @@ public class QuestionTwo extends AppCompatActivity {
         //Gets the tag assigned to the clicked button and converts it to and Integer
         int id = Integer.parseInt(btnClicked.getTag().toString());
 
+        //below line is added because when question4 is selected it exceeds the range of the new String list
+        id = id -1;
 
         mTracker.send(new HitBuilders.EventBuilder()
                 .setCategory(getResources().getString(R.string.q2))
                 .setAction(new String[]{"a","b","c","d"}[id])
                 .setValue(id)
                 .build());
+
+
 
         //Adds the data to the database dependent on the button that is clicked using the tag
         AddData(id);

@@ -8,32 +8,43 @@
     app:layout_collapseParallaxMultiplier="0.0">
 
     <LinearLayout
-        android:id="@+id/chat"
+        android:id="@+id/mainLayout"
         android:layout_gravity="center"
         android:layout_width="177dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:tag="11"
-        android:layout_weight="1"
-        android:weightSum="1">
+        android:tag="2"
+        android:layout_weight="1">
 
-        <Button
+
+    <Button
             android:id="@+id/a"
-            android:layout_width="match_parent"
-            android:layout_height="137dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
             android:background="@drawable/chat_icon"
             android:onClick="onClick"
             android:tag="1"
-            android:layout_weight="0.07" />
+            android:layout_weight="1" />
 
 
         <Button
             android:id="@+id/b"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:background="@drawable/track_history"
             android:onClick="onClick"
             android:tag="2" />
+
+        <Button
+            android:id="@+id/home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/home"
+            android:onClick="onClick"
+            android:tag="3" />
+
 
     </LinearLayout>
 

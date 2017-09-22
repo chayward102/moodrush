@@ -23,9 +23,12 @@ public class Consent extends AppCompatActivity {
 
     public void agreeBtnClicked(View view){
 
+        //changed to MainActivity
         Intent intent = new Intent(this, MainActivity.class);
+
         startActivity(intent);
 
 
     }
+
 }

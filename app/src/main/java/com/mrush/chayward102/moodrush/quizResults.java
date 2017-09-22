@@ -1,5 +1,6 @@
 package com.mrush.chayward102.moodrush;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.database.Cursor;
@@ -37,14 +38,17 @@ public class quizResults extends AppCompatActivity {
 
         name.setText( "Your score: " + Integer.toString(sum) );
         if (sum<22){
-            setContentView(R.layout.activity_results_low_risk);
+            Intent intent = new Intent(this,ResultsLowRisk.class);
+            startActivity(intent);
         }
 
         else if(sum>21 && sum<29){
-            setContentView(R.layout.activity_results_medium_risk);
+            Intent intent = new Intent(this,ResultsMediumRisk.class);
+            startActivity(intent);
         }
         else{
-            setContentView(R.layout.activity_results_high_risk);
+            Intent intent = new Intent(this,ResultsHighRisk.class);
+            startActivity(intent);
         }
 
 

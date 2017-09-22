@@ -13,10 +13,14 @@ import static android.R.attr.tag;
 
 public class ResultsLowRisk extends AppCompatActivity {
 
+    DatabaseHelper myDB;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results_low_risk);
+
+        myDB = new DatabaseHelper(this);
     }
 
 
@@ -43,7 +47,14 @@ public class ResultsLowRisk extends AppCompatActivity {
             startActivityForResult(intent, 1);
 
         }
-        else {
+        else if(id ==2 ){
+
+            Intent intent = new Intent(this, Index2.class);
+            startActivity(intent);
+
+        }
+        else if(id == 3){
+
 
             Intent intent = new Intent(this, Index2.class);
             startActivity(intent);
